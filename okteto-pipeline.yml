@@ -1,2 +1,2 @@
 deploy:
-  - helm upgrade --install account-service chart --set image.tag=${OKTETO_GIT_COMMIT}
+  - helm upgrade --install frontend-app chart --set image.tag=${OKTETO_GIT_COMMIT}
