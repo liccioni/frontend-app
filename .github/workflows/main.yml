@@ -8,10 +8,7 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
-    steps:
-      - name: Another step
-        run: |          
-          echo "Sha: ${{ github.sha }}
+    steps:      
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
@@ -29,4 +26,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: liccioni/frontend-app:latest
+          tags: liccioni/frontend-app:latest,liccioni/frontend-app:${{ github.sha }}
